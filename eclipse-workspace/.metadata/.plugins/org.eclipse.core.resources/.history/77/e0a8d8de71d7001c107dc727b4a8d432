@@ -1,0 +1,17 @@
+package snakeGame;
+
+import javax.swing.JFrame;
+
+public class Janela extends JFrame {
+	// Criando construtor da classe.
+	public Janela() {
+		Painel painel = new Painel(); // Instância do objeto painel, que faz refrência a classe Painel.
+		this.add(painel); // Faz referência as ferramentas do JPanel.
+		this.setTitle("Jogo da Cobrinha - Projeto Impacta/Qintess"); // Título da janela.
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Responsável por terminar a execução do programa ao fechar a janela.
+		this.setResizable(true); // Impede que o tamanho da janela seja redimensionado.
+		this.pack(); // Responsável por comportar o conteúdo da janela.
+		this.setVisible(true); // Responsável pela visibilidade da janela.
+		this.setLocationRelativeTo(null); // Responsável por centralizar a janela no centro da tela.
+	}
+}

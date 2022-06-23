@@ -1,0 +1,389 @@
+package snakeGame;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.util.Random;
+import javax.swing.JPanel;
+import javax.swing.Timer;
+
+public class Painel extends JPanel implements ActionListener {
+	static final int LARGURA_TELA = 300;
+	static final int ALTURA_TELA = 600;
+	static final int CELULAS = 25;
+	static final int UND_JOGO = (LARGURA_TELA * ALTURA_TELA) / CELULAS; // ***
+	static final int VELOCIDADE = 120;
+	final int linhas[] = new int[UND_JOGO]; // ***
+	final int colunas[] = new int[UND_JOGO]; // ***
+	int partesCobra = 5;
+	int frutasComidas;
+	int frutaEixoX;
+	int frutaEixoY;
+	char direcao = 'D'; // (D = direita, E = esquerda, C = cima, B = baixo)
+	boolean rodando = false; // Variável que testa a condição de execução do jogo.
+	boolean auxPausa = false; // Variável auxiliar que trata da pausa do jogo.
+	boolean auxInicio = false; // Variável auxiliar que trata a primeira execução do jogo.
+	boolean auxGameOver = false; // Variável auxiliar que trata do Game Over do jogo.
+	Timer timer;
+	Random random;
+
+	// Criando construtor da classe.
+	Painel() {
+		this.random = new Random();
+		MapaTeclas teclas = new MapaTeclas();
+		this.setPreferredSize(new Dimension(LARGURA_TELA, ALTURA_TELA)); // Definindo o tamanho do painel.
+		this.setBackground(Color.black); // Definindo a cor do fundo.
+		this.setFocusable(true); // Método reponsável por dá foco ao eventos do construtor (Mapa de teclas).
+		this.addKeyListener(teclas); // Método que adiciona ao contrutor a ação da tecla pressionada, que tem como
+										// parâmetro o objeto que faz referência a classe interna MapaTeclas.
+	}
+
+	// Método responsável por iniciar o jogo.
+	public void iniciarJogo() {
+		novaFruta(); // Método reponsável como gerar uma fruta no tabuleiro.
+		this.rodando = true; // Seta a variável como true para validação das lógicas de Game Over e pausas do
+								// jogo.
+		this.timer = new Timer(VELOCIDADE, this); // Recebe dois parâmetros, um do tipo inteiro para delay, e um do tipo
+													// construído da interface ActionListener.
+		timer.start(); // Iniciasse o timer de execução.
+	}
+
+	// Método responsável por toda a pintura da janela. (Sobrescrita padrão para se
+	// trabalhar com pinturas)
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		pintura(g);
+	}
+
+	// Método responsável pelo desenho da janela.
+	public void pintura(Graphics g) {
+		// Pintura da mensagem de ínicio.
+		if (!auxInicio) { // Condiciona a execução da tela aguardando a interação do usuário.
+			imprimeInicio(g); // Imprime a mensagem de orientação para início do jogo.
+			auxInicio = true; // Seta a varíavel como true para validação do bloco condicional posterior.
+		}
+
+		if (auxInicio) { // Varíavel que só foi setada como true na execução anterior a essa.
+			if (rodando) { // Variável que foi setada como true na execução do método iniciarJogo(), apoós
+							// o acionamento da tecla ENTER.
+				// Reponsável por iterar a construção das linhas.
+				for (int i = 0; i < ALTURA_TELA / CELULAS; i++) {
+					// Pintura das linhas
+					g.drawLine(0, i * CELULAS, (LARGURA_TELA - 200) - CELULAS, i * CELULAS); // Construção das linhas.
+																								// Foi adaptado uma
+																								// diminuição de 1
+																								// coluna de células
+																								// parar definição
+																								// visual do tabuleiro.
+
+					g.drawLine(i * CELULAS, 0, i * CELULAS, ALTURA_TELA); // Construção das colunas.
+
+				}
+
+				// Pintura da fruta.
+				g.setColor(Color.green);
+				g.fillOval(frutaEixoX, frutaEixoY, CELULAS, CELULAS);
+
+				// Executa a iteração para pintura da cobra.
+				for (int i = 0; i < partesCobra; i++) {
+					if (i == 0) { // Bloco que testa o índice inicial para pintar a cabeça.
+						g.setColor(Color.red);
+						g.fillRect(linhas[i], colunas[i], CELULAS, CELULAS);
+					} else { // Bloco que executa a pintura do restante do corpo.
+						g.setColor(Color.orange);
+						g.fillRect(linhas[i], colunas[i], CELULAS, CELULAS);
+					}
+				}
+
+				// Pintura de mensagem Snake Game no dashboard.
+				g.setColor(Color.orange);
+				g.setFont(new Font("Calibri", Font.BOLD, 40));
+				FontMetrics imp1 = getFontMetrics(g.getFont());
+				g.drawString("Snake Game", (LARGURA_TELA - imp1.stringWidth("Snake Game")) / 2 + 288,
+						ALTURA_TELA - 560);
+
+				// Pintura de componentes da equipe no dashboard.
+				g.setColor(Color.gray);
+				g.setFont(new Font("Calibri", Font.BOLD, 15));
+				FontMetrics imp2 = getFontMetrics(g.getFont());
+				g.drawString("Equipe 07: Ronaldo / William",
+						(LARGURA_TELA - imp2.stringWidth("Equipe 07: Ronaldo / William")) / 2 + 276, ALTURA_TELA - 530);
+
+				// Pintura de mensagem dos pontos no dashboard.
+				g.setColor(Color.red);
+				g.setFont(new Font("Calibri", Font.BOLD, 40));
+				FontMetrics imp3 = getFontMetrics(g.getFont());
+				g.drawString("Pontos: " + frutasComidas,
+						(LARGURA_TELA - imp3.stringWidth("Pontos: " + frutasComidas)) / 2 + 290, ALTURA_TELA / 2 - 50);
+
+				// Pintura de cabeçalho Comandos no dashboard.
+				g.setColor(Color.white);
+				g.setFont(new Font("Calibri", Font.BOLD, 20));
+				FontMetrics imp4 = getFontMetrics(g.getFont());
+				g.drawString("Comandos: ", (LARGURA_TELA - imp4.stringWidth("Comandos: ")) / 2 + 236,
+						ALTURA_TELA - 160);
+
+				// Pintura de instruções de direita no dashboard.
+				g.setColor(Color.white);
+				g.setFont(new Font("Calibri", Font.BOLD, 15));
+				FontMetrics imp5 = getFontMetrics(g.getFont());
+				g.drawString("Direita: Seta direita / Tecla D",
+						(LARGURA_TELA - imp5.stringWidth("Direita: Seta direita / Tecla D")) / 2 + 274,
+						ALTURA_TELA - 130);
+
+				// Pintura de instruções de esquerda no dashboard.
+				g.setColor(Color.white);
+				g.setFont(new Font("Calibri", Font.BOLD, 15));
+				FontMetrics imp6 = getFontMetrics(g.getFont());
+				g.drawString("Esquerda: Seta esquerda / Tecla A",
+						(LARGURA_TELA - imp6.stringWidth("Esquerda: Seta esqueda / Tecla A")) / 2 + 288,
+						ALTURA_TELA - 100);
+
+				// Pintura de instruções de cima no dashboard.
+				g.setColor(Color.white);
+				g.setFont(new Font("Calibri", Font.BOLD, 15));
+				FontMetrics imp7 = getFontMetrics(g.getFont());
+				g.drawString("Cima: Seta cima / Tecla W",
+						(LARGURA_TELA - imp7.stringWidth("Cima: Seta cima / Tecla W")) / 2 + 265, ALTURA_TELA - 70);
+
+				// Pintura de instruções de baixo no dashboard.
+				g.setColor(Color.white);
+				g.setFont(new Font("Calibri", Font.BOLD, 15));
+				FontMetrics imp8 = getFontMetrics(g.getFont());
+				g.drawString("Baixo: Seta baixo / Tecla S",
+						(LARGURA_TELA - imp8.stringWidth("Baixo: Seta baixo / Tecla S")) / 2 + 266, ALTURA_TELA - 40);
+
+				// Pintura de instruções de pausa no dashboard.
+				g.setColor(Color.white);
+				g.setFont(new Font("Calibri", Font.BOLD, 15));
+				FontMetrics imp9 = getFontMetrics(g.getFont());
+				g.drawString("Pausa/Despausa: Tecla P",
+						(LARGURA_TELA - imp9.stringWidth("Baixo: Seta baixo / Tecla S")) / 2 + 266, ALTURA_TELA - 10);
+
+			} else if (auxGameOver) { // Condiciona a impressão do texto de Game Over após a validação da variável.
+				imprimeGameOver(g);
+			}
+		}
+	}
+
+	// Método responsável pela criação de novas frutas no tabuleiro.
+	public void novaFruta() {
+		this.frutaEixoX = random.nextInt((int) ((LARGURA_TELA - 200) / (CELULAS * 2))) * CELULAS;
+		this.frutaEixoY = random.nextInt((int) (ALTURA_TELA / CELULAS)) * CELULAS;
+	}
+
+	// Método reponsável pela movimentação da cobra.
+	public void movimentos() {
+		// Laço responsável pela movimentação da cobra no tabuleiro.
+		for (int i = partesCobra; i > 0; i--) {
+			linhas[i] = linhas[i - 1]; // Responsável pela correção do índice para percorrer as linhas.
+			colunas[i] = colunas[i - 1]; // Responsável pela correção do índice parar percorrer as colunas.
+		}
+
+		// Condicional que vai atribuir as direções nos arrays de linhas e colunas.
+		switch (direcao) {
+		case 'C':
+			colunas[0] -= CELULAS;
+			break;
+		case 'B':
+			colunas[0] += CELULAS;
+			break;
+		case 'E':
+			linhas[0] -= CELULAS;
+			break;
+		case 'D':
+			linhas[0] += CELULAS;
+			break;
+		}
+	}
+
+	// Método responsável por checar a criação de novas frutas.
+	public void checarFrutas() {
+		if ((linhas[0] == frutaEixoX) && (colunas[0] == frutaEixoY)) { // Testa se a cabeça da cobra encontra o mesmo
+																		// valor de posição que a fruta.
+			partesCobra++; // Acrescenta um pedaço no corpo da cobra.
+			frutasComidas++; // Acrescenta uma fruta no contador.
+			novaFruta(); // Executa o método que gera outra fruta.
+		}
+	}
+
+	// Método responsável por controlar as colisões da cobra.
+	public void checarColisoes() {
+		// Laço que testa a colisão no próprio corpo da cobra.
+		for (int i = partesCobra; i > 0; i--) {
+			if ((linhas[0] == linhas[i]) && colunas[0] == colunas[i]) {
+				rodando = false; // se alterar esse valor o jogador nao perde ao passar pelo corpo
+				auxGameOver = true;
+			}
+		}
+
+		// Bloco que testa a colisão no lado esquerdo da tela.
+		if (linhas[0] < 0) {
+			rodando = false;
+			auxGameOver = true;
+		}
+
+		// Bloco que testa a colisão no lado direito da tela.
+		if (linhas[0] > ((LARGURA_TELA - 200) - CELULAS * 2)) {
+			rodando = false;
+			auxGameOver = true;
+		}
+
+		// Bloco que testa a colisão na parte superior da tela.
+		if (colunas[0] < 0) {
+			rodando = false;
+			auxGameOver = true;
+		}
+
+		// Bloco que testa a colisão na parte inferior da tela.
+		if (colunas[0] > ALTURA_TELA - CELULAS) {
+			rodando = false;
+			auxGameOver = true;
+		}
+
+		// Testa as condições das variavéis rodando e auxGameOver e para o timer de
+		// execução.
+		if (rodando == false && auxGameOver == true) {
+			timer.stop();
+		}
+	}
+
+	// Método responsável pelas impressões referente ao Game Over do jogo.
+	public void imprimeGameOver(Graphics g) {
+		// Texto para exibir a mensagem de Game Over.
+		g.setColor(Color.white);
+		g.setFont(new Font("Calibri", Font.BOLD, 75));
+		FontMetrics imp1 = getFontMetrics(g.getFont());
+		g.drawString("Game Over!", (LARGURA_TELA - imp1.stringWidth("Game Over!")) / 2, ALTURA_TELA / 2);
+
+		// Texto para exibir a mensagem de pontuação final.
+		g.setColor(Color.red);
+		g.setFont(new Font("Calibri", Font.BOLD, 25));
+		FontMetrics imp2 = getFontMetrics(g.getFont());
+		g.drawString("Você acumulou: " + frutasComidas + " ponto(s)",
+				(LARGURA_TELA - imp2.stringWidth("Você acumulou: " + frutasComidas + " ponto(s)")) / 2,
+				ALTURA_TELA / 2 + 50);
+	}
+
+	// Método responsável pelas impressões referente a Pausa do jogo.
+	public void imprimePausa(Graphics g) {
+		// Texto para exibir a mensagem de Pausa.
+		g.setColor(Color.red);
+		g.setFont(new Font("Calibri", Font.BOLD, 75));
+		FontMetrics imp2 = getFontMetrics(g.getFont());
+		g.drawString("Pausado!", (LARGURA_TELA - imp2.stringWidth("Pausado!")) / 2, ALTURA_TELA / 2);
+
+		// Texto para exibir a mensagem de despausa.
+		g.setColor(Color.red);
+		g.setFont(new Font("Calibri", Font.BOLD, 25));
+		FontMetrics imp3 = getFontMetrics(g.getFont());
+		g.drawString("Tecle P para despausar!", (LARGURA_TELA - imp3.stringWidth("Tecle P para despausar!")) / 2,
+				ALTURA_TELA / 2 + 50);
+	}
+
+	// Método responsável pelas impressões referente ao início do jogo.
+	public void imprimeInicio(Graphics g) {
+		g.setColor(Color.white); // Setar a cor do texto.
+		g.setFont(new Font("Calibri", Font.BOLD, 75)); // Setar a formatação do texto.
+		FontMetrics imp1 = getFontMetrics(g.getFont());
+		g.drawString("Tecle ENTER para iniciar!", (LARGURA_TELA - imp1.stringWidth("Tecle ENTER para iniciar!")) / 2,
+				ALTURA_TELA / 2);
+	}
+
+	// Método obrigatório conhecido como "motor" do jogo. (Sobrescrita necessária).
+	public void actionPerformed(ActionEvent e) {
+		if (rodando) {
+			movimentos();
+			checarFrutas();
+			checarColisoes();
+		}
+		repaint(); // ***
+	}
+
+	// Classe (Interna) reponsável pelo mapa de teclas, que faz herança a classe
+	// padrão KeyAdapter.
+	public class MapaTeclas extends KeyAdapter {
+		// Método existente na classe KeyAdapter que necessita ser sobrescrito.
+		public void keyPressed(KeyEvent e) {
+			switch (e.getKeyCode()) {
+
+			// Direção esquerda.
+			case KeyEvent.VK_LEFT: // Teste de tecla direcional esquerda.
+				if (direcao != 'D') { // Testa se não há direção oposta referente a tecla pressionada.
+					direcao = 'E'; // Atribui a direção da tecla pressionada.
+				}
+				break;
+			case KeyEvent.VK_A:
+				if (direcao != 'D') {
+					direcao = 'E';
+				}
+				break;
+
+			// Direção direita.
+			case KeyEvent.VK_RIGHT:
+				if (direcao != 'E') {
+					direcao = 'D';
+				}
+				break;
+			case KeyEvent.VK_D:
+				if (direcao != 'E') {
+					direcao = 'D';
+				}
+				break;
+
+			// Direção cima.
+			case KeyEvent.VK_UP:
+				if (direcao != 'B') {
+					direcao = 'C';
+				}
+				break;
+			case KeyEvent.VK_W:
+				if (direcao != 'B') {
+					direcao = 'C';
+				}
+				break;
+
+			// Direção baixo.
+			case KeyEvent.VK_DOWN:
+				if (direcao != 'C') {
+					direcao = 'B';
+				}
+				break;
+			case KeyEvent.VK_S:
+				if (direcao != 'C') {
+					direcao = 'B';
+				}
+				break;
+
+			// Função de pausa.
+			case KeyEvent.VK_P:
+				if (rodando) { // Condiciona a tecla a funcionar apenas se o jogo estiver rodando.
+					if (!auxPausa) { // Condiciona o primeiro acionamento da tecla a parada de execução do timer do
+										// jogo.
+						timer.stop(); // Executa a parada de execução do timer do jogo.
+						auxPausa = true; // Seta a variável como true para validar o próximo acionamento.
+						imprimePausa(getGraphics()); // Executa o método de impressão do texto de pausa.
+					} else { // Condiciona o segundo acionamento da tecla a retomada de execução do timer do
+								// jogo.
+						timer.start(); // Executa a retomada de execução do timer do jogo.
+						auxPausa = false; // Seta a variável como false para validar o próximo acionamento.
+					}
+				}
+				break;
+
+			// Função de iniciar o jogo.
+			case KeyEvent.VK_ENTER:
+				if (!rodando && !auxGameOver) {
+					iniciarJogo();
+				}
+				break;
+			}
+		}
+	}
+}

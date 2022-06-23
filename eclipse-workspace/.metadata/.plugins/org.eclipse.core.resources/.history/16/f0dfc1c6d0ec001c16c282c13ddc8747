@@ -1,0 +1,22 @@
+package OperadoresMyDools;
+
+import java.time.LocalDateTime;
+
+public class DateTime extends Datas{
+
+	public static void main(String[] args) {
+		LocalDateTime = data = LocalDateTime.now();
+		int hora = data.getHour();
+		int dia = data.getDayOfMonth();
+		int ano = data.getYear();
+		
+		if(hora < 12) {
+			System.out.println("Bom dia");
+		}
+		
+		System.out.println("hoje é dia: " + dia);
+		System.out.println("Estamos no ano: " + ano);
+
+	}
+
+}

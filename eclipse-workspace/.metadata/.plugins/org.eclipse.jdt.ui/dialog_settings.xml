@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="2"/>
+	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-11"/>
+	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo" value="false"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\Users\William Rafael\Downloads\CURSO IMPACTA JAVA"/>
+	<section name="completion_proposal_size">
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="JavaElementSearchActions">
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item key="org.eclipse.jdt.ui.typecomment.deprecated" value="true"/>
+	</section>
+	<section name="NewClassWizardPage">
+		<item key="create_constructor" value="false"/>
+		<item key="create_unimplemented" value="true"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
+		<item key="group_libraries" value="true"/>
+		<item key="layout" value="2"/>
+		<item key="rootMode" value="1"/>
+		<item key="linkWithEditor" value="false"/>
+		<item key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;packageExplorer group_libraries=&quot;1&quot; layout=&quot;2&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;1&quot; workingSetName=&quot;Aggregate for window 1649805214823&quot;&gt;&#x0D;&#x0A;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;&gt;&#x0D;&#x0A;&lt;xmlDefinedFilters&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.StaticsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.buildfolder&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.mylyn.java.ui.MembersFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.m2e.MavenModuleFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.subProject&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.pde.ui.BinaryProjectFilter1&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.pde.ui.ExternalPluginLibrariesFilter1&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.DeprecatedMembersFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;/xmlDefinedFilters&gt;&#x0D;&#x0A;&lt;/customFilters&gt;&#x0D;&#x0A;&lt;/packageExplorer&gt;"/>
+	</section>
+	<section name="NewPackageWizardPage">
+		<item key="create_package_info_java" value="false"/>
+	</section>
+	<section name="RefactoringWizard.preview">
+		<item key="width" value="600"/>
+		<item key="height" value="400"/>
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item key="updateSimilarElements" value="false"/>
+		<item key="updateSimilarElementsMatchStrategy" value="1"/>
+		<item key="updateTextualMatches" value="false"/>
+		<item key="updateQualifiedNames" value="false"/>
+		<item key="patterns" value="*"/>
+		<item key="renameSubpackages" value="false"/>
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item key="pageIndex" value="2"/>
+	</section>
+	<section name="JavadocWizardDialog">
+		<item key="DIALOG_X_ORIGIN" value="372"/>
+		<item key="DIALOG_Y_ORIGIN" value="142"/>
+		<item key="DIALOG_WIDTH" value="616"/>
+		<item key="DIALOG_HEIGHT" value="567"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="javadoc">
+		<item key="javadoc_command_history" value="C:\Program Files\Java\jdk-18.0.1.1\bin\javadoc.exe"/>
+		<item key="fromStandard" value="true"/>
+		<item key="docletname" value=""/>
+		<item key="docletpath" value=""/>
+		<item key="access" value="public"/>
+		<item key="use" value="true"/>
+		<item key="author" value="true"/>
+		<item key="version" value="true"/>
+		<item key="nodeprecated" value="false"/>
+		<item key="nodeprecatedlist" value="false"/>
+		<item key="splitindex" value="true"/>
+		<item key="noindex" value="false"/>
+		<item key="notree" value="false"/>
+		<item key="nonavbar" value="false"/>
+		<item key="openinbrowser" value="false"/>
+		<item key="source" value="11"/>
+		<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\SnakeGame.zip_expanded\SnakeGame\javadoc.xml"/>
+		<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\SnakeGame.zip_expanded\SnakeGame\doc"/>
+		<section name="projects">
+			<section name="Snake_Game">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\SnakeGame.zip_expanded\SnakeGame\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\SnakeGame.zip_expanded\SnakeGame\javadoc.xml"/>
+			</section>
+			<section name="LaboratorioCap11">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\LaboratorioCap11\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\LaboratorioCap11\javadoc.xml"/>
+			</section>
+			<section name="snakeGame">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\Downloads\CURSO IMPACTA JAVA\Nova pasta (2)"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\snakeGame\javadoc.xml"/>
+			</section>
+			<section name="MyDools">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\MyDools\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\MyDools\javadoc.xml"/>
+			</section>
+			<section name="LaboratorioCap8">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\LaboratorioCap8\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\LaboratorioCap8\javadoc.xml"/>
+			</section>
+			<section name="LaboratorioCap10">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\LaboratorioCap10\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\LaboratorioCap10\javadoc.xml"/>
+			</section>
+			<section name="Desafio">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\Desafio\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\Desafio\javadoc.xml"/>
+			</section>
+			<section name="Interface">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\Interface\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\Interface\javadoc.xml"/>
+			</section>
+			<section name="Arrays">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\Arrays\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\Arrays\javadoc.xml"/>
+			</section>
+			<section name="ArgsMain">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\ArgsMain\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\ArgsMain\javadoc.xml"/>
+			</section>
+			<section name="Contrutores">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\Downloads\CURSO IMPACTA JAVA\Nova pasta (2)"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\Contrutores\javadoc.xml"/>
+			</section>
+			<section name="ReforcoJava">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\ReforcoJava\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\ReforcoJava\javadoc.xml"/>
+			</section>
+			<section name="SnakeGame.zip_expanded">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\SnakeGame.zip_expanded\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\SnakeGame.zip_expanded\javadoc.xml"/>
+			</section>
+			<section name="Excecoes">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\Excecoes\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\Excecoes\javadoc.xml"/>
+			</section>
+			<section name="IntroPOO">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\IntroPOO\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\IntroPOO\javadoc.xml"/>
+			</section>
+			<section name="exemplo1">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\exemplo1\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\exemplo1\javadoc.xml"/>
+			</section>
+			<section name="LaboratorioCap6">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\LaboratorioCap6\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\LaboratorioCap6\javadoc.xml"/>
+			</section>
+			<section name="EstudoMetodo">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\EstudoMetodo\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\EstudoMetodo\javadoc.xml"/>
+			</section>
+			<section name="ListaDeExercicios50">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\ListaDeExercicios50\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\ListaDeExercicios50\javadoc.xml"/>
+			</section>
+			<section name="EstruturasControle">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\EstruturasControle\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\EstruturasControle\javadoc.xml"/>
+			</section>
+			<section name="ListaExerciciosBasicos">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\ListaExerciciosBasicos\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\ListaExerciciosBasicos\javadoc.xml"/>
+			</section>
+			<section name="Heranca">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\Heranca\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\Heranca\javadoc.xml"/>
+			</section>
+			<section name="DesafioMultiMatrizes">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\DesafioMultiMatrizes\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\DesafioMultiMatrizes\javadoc.xml"/>
+			</section>
+			<section name="LoboratorioCap8lab2">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\LoboratorioCap8lab2\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\LoboratorioCap8lab2\javadoc.xml"/>
+			</section>
+			<section name="LabCap7">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\LabCap7\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\LabCap7\javadoc.xml"/>
+			</section>
+			<section name="LaboratorioCap5">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\LaboratorioCap5\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\LaboratorioCap5\javadoc.xml"/>
+			</section>
+			<section name="LaboratorioCap9">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\LaboratorioCap9\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\LaboratorioCap9\javadoc.xml"/>
+			</section>
+			<section name="ProjetoGameCobra">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\William Rafael\eclipse-workspace\ProjetoGameCobra\doc"/>
+				<item key="antpath" value="C:\Users\William Rafael\eclipse-workspace\ProjetoGameCobra\javadoc.xml"/>
+			</section>
+		</section>
+	</section>
+	<section name="NewAnnotationWizardPage">
+		<item key="add_documented" value="false"/>
+		<section name="AddRetention">
+			<item key="enabled" value="false"/>
+			<list key="selectedEnums">
+				<item value="CLASS"/>
+			</list>
+		</section>
+		<section name="AddTarget">
+			<item key="enabled" value="false"/>
+			<list key="selectedEnums">
+			</list>
+		</section>
+	</section>
+	<section name="SourceActionDialog.methods">
+		<item key="VisibilityModifier" value="1"/>
+		<item key="FinalModifier" value="false"/>
+		<item key="SynchronizedModifier" value="false"/>
+		<item key="Comments" value="false"/>
+		<item key="LimitElements" value="false"/>
+		<item key="IgnoreDefault" value="true"/>
+		<item key="StringStyle" value="0"/>
+		<item key="LimitValue" value="10"/>
+		<item key="SkipNull" value="false"/>
+		<item key="ToStringTemplateSelected" value="0"/>
+	</section>
+	<section name="AddGetterSetterDialog">
+		<item key="SortOrdering" value="false"/>
+		<item key="RemoveFinal" value="false"/>
+	</section>
+	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
+		<item key="DIALOG_X_ORIGIN" value="297"/>
+		<item key="DIALOG_Y_ORIGIN" value="56"/>
+		<item key="DIALOG_WIDTH" value="526"/>
+		<item key="DIALOG_HEIGHT" value="696"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="SourceActionDialog.constructors">
+		<item key="VisibilityModifier" value="1"/>
+		<item key="FinalModifier" value="false"/>
+		<item key="SynchronizedModifier" value="false"/>
+		<item key="Comments" value="false"/>
+	</section>
+	<section name="GenerateConstructorUsingFieldsSelectionDialog">
+		<item key="OmitCallToSuper" value="false"/>
+	</section>
+	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
+		<item key="DIALOG_X_ORIGIN" value="302"/>
+		<item key="DIALOG_Y_ORIGIN" value="68"/>
+		<item key="DIALOG_WIDTH" value="517"/>
+		<item key="DIALOG_HEIGHT" value="678"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="AddUnimplementedConstructorsDialog">
+		<item key="OmitCallToSuper" value="false"/>
+	</section>
+	<section name="DialogBounds_AddUnimplementedConstructorsDialog">
+		<item key="DIALOG_X_ORIGIN" value="302"/>
+		<item key="DIALOG_Y_ORIGIN" value="102"/>
+		<item key="DIALOG_WIDTH" value="517"/>
+		<item key="DIALOG_HEIGHT" value="627"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="FatJarPackageWizard">
+		<item key="FatJarPackageWizardPage.ANTSCRIPT_SAVE" value="false"/>
+		<item key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION" value="C:\Users\William Rafael\eclipse-workspace"/>
+		<item key="FatJarPackageWizardPage.LIBRARY_HANDLING" value="1"/>
+		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="HelloFrame - TesteLib"/>
+		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="C:\Users\William Rafael\Downloads\CURSO IMPACTA JAVA\TesteLib.jar"/>
+		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="C:\Users\William Rafael\Downloads\CURSO IMPACTA JAVA\TesteLib.jar"/>
+		</list>
+		<list key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION_HISTORY">
+			<item value=".xml"/>
+		</list>
+	</section>
+	<section name="DialogBounds_GenerateToStringDialog">
+		<item key="DIALOG_X_ORIGIN" value="302"/>
+		<item key="DIALOG_Y_ORIGIN" value="60"/>
+		<item key="DIALOG_WIDTH" value="516"/>
+		<item key="DIALOG_HEIGHT" value="691"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

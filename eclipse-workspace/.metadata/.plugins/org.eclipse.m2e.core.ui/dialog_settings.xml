@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\William Rafael\eclipse-workspace\FullStackApp"/>
+			<item value="C:\Users\William Rafael\Downloads\CURSO IMPACTA JAVA\FullStackApp (2)\FullStackApp"/>
+			<item value="C:\Users\William Rafael\Downloads\CURSO IMPACTA JAVA\SpringJava-Upload-Download-main"/>
+			<item value="C:\Users\William Rafael\Downloads\CURSO IMPACTA JAVA\saudacao"/>
+			<item value="C:\Users\William Rafael\eclipse-workspace\saudacao"/>
+			<item value="C:\Users\William Rafael\Downloads\CURSO IMPACTA JAVA\demo2"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

@@ -1,0 +1,25 @@
+package OperadoresMyDools;
+
+public class Datas {
+	double hora;
+	double ano;
+	double dia;
+	public double getHora() {
+		return hora;
+	}
+	public void setHora(double hora) {
+		this.hora = hora;
+	}
+	public double getAno() {
+		return ano;
+	}
+	public void setAno(double ano) {
+		this.ano = ano;
+	}
+	public double getDia() {
+		return dia;
+	}
+	public void setDia(double dia) {
+		this.dia = dia;
+	}
+}
